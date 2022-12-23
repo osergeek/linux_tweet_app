@@ -31,7 +31,7 @@ jobs:
 
       - name: Push Docker Image to Artifact Registry
         run: |-
-          docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
-          docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GITHUB_SHA
-          docker push europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
-          docker push europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GITHUB_SHA
+          docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/linux-app/$IMAGE_NAME:latest
+          docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/linux-app/$IMAGE_NAME:$GITHUB_SHA
+          docker push europe-west2-docker.pkg.dev/$PROJECT_ID/linux-app/$IMAGE_NAME:latest
+          docker push europe-west2-docker.pkg.dev/$PROJECT_ID/linux-app/$IMAGE_NAME:$GITHUB_SHA
