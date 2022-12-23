@@ -31,7 +31,7 @@ jobs:
 
       - name: Push Docker Image to Artifact Registry
         env:
-          GIT_TAG: ${GITHUB_SHA}
+          GIT_TAG: "${GITHUB_SHA}"
         run: |-
           docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
           docker tag $IMAGE_NAME:latest europe-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GIT_TAG
